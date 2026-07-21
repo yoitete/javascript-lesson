@@ -1,7 +1,8 @@
 // Q1
 let nickname = 'ひだい';
-let age = '私は' + nickname + 'です。' + '年齢は' + 28 + '歳です。';
-console.log(age);
+let age = 28
+let my = '私は' + nickname + 'です。' + '年齢は' + age + '歳です。';
+console.log(my);
 
 // Q2
 let language = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
@@ -38,7 +39,15 @@ let playerList = [
 console.log(playerList[1].favorites[1]);
 
 // Q5
-console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);
+// console.log((playerList[0].age + playerList[1].age + playerList[2].age) / 3);
+
+let ages = 0;
+for (let i = 0; i < playerList.length; i++) {
+  ages = playerList[i].age + ages
+}
+
+let aveAge = ages / playerList.length;
+console.log(aveAge);
 
 // Q6
 function sayHello() {
